@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ניקוד וויסט</string>
+    <string name="name_hint">שם השחקן.ית</string>
+    <string name="player_a">שחקן.ית א</string>
+    <string name="player_b">שחקן.ית ב</string>
+    <string name="player_c">שחקן.ית ג</string>
+    <string name="player_d">שחקן.ית ד</string>
+    <string name="total_score">סה\"כ:</string>
+    <string name="last_round">סבב אחרון:</string>
+    <string name="current_guess">ניחוש נוכחי:</string>
+    <string name="round">סבב</string>
+    <string name="round_number">סבב מספר</string>
+    <string name="takings">לקיחות:</string>
+    <string name="start_round">התחלת משחק</string>
+    <string name="submit_takings">סבב הבא</string>
+    <string name="incorrectTotalGuess">מספר הניחושים הכולל לא יכול להיות 13.</string>
+    <string name="incorrectTotalTakings">מספר הלקיחות הכולל חייב להיות 13.</string>
+    <string name="reset">משחק חדש</string>
+    <string name="ruling_set">סדרה שולטת:</string>
+    <string name="spade">עלה</string>
+    <string name="heart">לב</string>
+    <string name="clover">תלתן</string>
+    <string name="diamond">יהלום</string>
+</resources>

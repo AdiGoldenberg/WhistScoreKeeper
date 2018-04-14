@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lightongreen"
+    tools:context="com.example.adi.whistscorekeeper.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:id="@+id/roundNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/round"
+            android:textAlignment="center"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/roundNumSize"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/ruling_set"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/nameSize" />
+
+            <Spinner
+                android:id="@+id/suitSpinner"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:popupBackground="@color/suiteBackgroundColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:orientation="horizontal">
+
+            <!-- Player A -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/nameA"
+                    style="@style/playerName"
+                    android:text="@string/player_a" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/numberTitle"
+                            android:text="@string/total_score" />
+
+                        <TextView
+                            android:id="@+id/totalScoreA"
+                            style="@style/totalScore" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/numberTitle"
+                            android:text="@string/last_round" />
+
+                        <TextView
+                            android:id="@+id/lastScoreA"
+                            style="@style/lastScore" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/numberTitle"
+                    android:text="@string/current_guess" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/plusGuessA"
+                        style="@style/plusButton"
+                        android:layout_toLeftOf="@id/guessA" />
+
+                    <TextView
+                        android:id="@+id/guessA"
+                        style="@style/guessTakeNum" />
+
+                    <Button
+                        android:id="@+id/minusGuessA"
+                        style="@style/minusButton"
+                        android:layout_toRightOf="@id/guessA" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/numberTitle"
+                    android:text="@string/takings" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/plusTakingsA"
+                        style="@style/plusButton"
+                        android:layout_toLeftOf="@id/takingsA" />
+
+                    <TextView
+                        android:id="@+id/takingsA"
+                        style="@style/guessTakeNum" />
+
+                    <Button
+                        android:id="@+id/minusTakingsA"
+                        style="@style/minusButton"
+                        android:layout_toRightOf="@id/takingsA" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separatorWidth"
+                    android:layout_marginRight="@dimen/separatorWidth"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="@color/colorAccent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/separatorWidth"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/padding"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:background="@color/colorAccent" />
+
+            <!-- Player B -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/nameB"
+                    style="@style/playerName"
+                    android:text="@string/player_b" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/numberTitle"
+                            android:text="@string/total_score" />
+
+                        <TextView
+                            android:id="@+id/totalScoreB"
+                            style="@style/totalScore" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/numberTitle"
+                            android:text="@string/last_round" />
+
+                        <TextView
+                            android:id="@+id/lastScoreB"
+                            style="@style/lastScore" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/numberTitle"
+                    android:text="@string/current_guess" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/plusGuessB"
+                        style="@style/plusButton"
+                        android:layout_toLeftOf="@id/guessB" />
+
+                    <TextView
+                        android:id="@+id/guessB"
+                        style="@style/guessTakeNum" />
+
+                    <Button
+                        android:id="@+id/minusGuessB"
+                        style="@style/minusButton"
+                        android:layout_toRightOf="@id/guessB" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/numberTitle"
+                    android:text="@string/takings" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/plusTakingsB"
+                        style="@style/plusButton"
+                        android:layout_toLeftOf="@id/takingsB" />
+
+                    <TextView
+                        android:id="@+id/takingsB"
+                        style="@style/guessTakeNum" />
+
+                    <Button
+                        android:id="@+id/minusTakingsB"
+                        style="@style/minusButton"
+                        android:layout_toRightOf="@id/takingsB" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separatorWidth"
+                    android:layout_marginLeft="@dimen/separatorWidth"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="@color/colorAccent" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Player C -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/nameC"
+                    style="@style/playerName"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/player_c" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/numberTitle"
+                            android:text="@string/total_score" />
+
+                        <TextView
+                            android:id="@+id/totalScoreC"
+                            style="@style/totalScore" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/numberTitle"
+                            android:text="@string/last_round" />
+
+                        <TextView
+                            android:id="@+id/lastScoreC"
+                            style="@style/lastScore" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/numberTitle"
+                    android:text="@string/current_guess" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/plusGuessC"
+                        style="@style/plusButton"
+                        android:layout_toLeftOf="@id/guessC" />
+
+                    <TextView
+                        android:id="@+id/guessC"
+                        style="@style/guessTakeNum" />
+
+                    <Button
+                        android:id="@+id/minusGuessC"
+                        style="@style/minusButton"
+                        android:layout_toRightOf="@id/guessC" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/numberTitle"
+                    android:text="@string/takings" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/plusTakingsC"
+                        style="@style/plusButton"
+                        android:layout_toLeftOf="@id/takingsC" />
+
+                    <TextView
+                        android:id="@+id/takingsC"
+                        style="@style/guessTakeNum" />
+
+                    <Button
+                        android:id="@+id/minusTakingsC"
+                        style="@style/minusButton"
+                        android:layout_toRightOf="@id/takingsC" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/separatorWidth"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:layout_marginTop="@dimen/padding"
+                android:background="@color/colorAccent" />
+
+            <!-- Player D -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/nameD"
+                    style="@style/playerName"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/player_d" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/numberTitle"
+                            android:text="@string/total_score" />
+
+                        <TextView
+                            android:id="@+id/totalScoreD"
+                            style="@style/totalScore" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/numberTitle"
+                            android:text="@string/last_round" />
+
+                        <TextView
+                            android:id="@+id/lastScoreD"
+                            style="@style/lastScore" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/numberTitle"
+                    android:text="@string/current_guess" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/plusGuessD"
+                        style="@style/plusButton"
+                        android:layout_toLeftOf="@id/guessD" />
+
+                    <TextView
+                        android:id="@+id/guessD"
+                        style="@style/guessTakeNum" />
+
+                    <Button
+                        android:id="@+id/minusGuessD"
+                        style="@style/minusButton"
+                        android:layout_toRightOf="@id/guessD" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/numberTitle"
+                    android:text="@string/takings" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/plusTakingsD"
+                        style="@style/plusButton"
+                        android:layout_toLeftOf="@id/takingsD" />
+
+                    <TextView
+                        android:id="@+id/takingsD"
+                        style="@style/guessTakeNum" />
+
+                    <Button
+                        android:id="@+id/minusTakingsD"
+                        style="@style/minusButton"
+                        android:layout_toRightOf="@id/takingsD" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/startRound"
+                style="@style/actionButton"
+                android:onClick="startRound"
+                android:text="@string/start_round" />
+
+            <Button
+                android:id="@+id/submitTakings"
+                style="@style/actionButton"
+                android:layout_below="@id/startRound"
+                android:onClick="submitTakings"
+                android:text="@string/submit_takings" />
+
+            <Button
+                android:id="@+id/reset"
+                style="@style/actionButton"
+                android:layout_below="@id/submitTakings"
+                android:onClick="reset"
+                android:text="@string/reset" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

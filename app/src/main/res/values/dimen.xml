@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="roundNumSize">24sp</dimen>
+    <dimen name="nameSize">18sp</dimen>
+    <dimen name="bigScoreSize">36sp</dimen>
+    <dimen name="smallScoreSize">24sp</dimen>
+    <dimen name="smallScoreViewSize">24dp</dimen>
+    <dimen name="explanationSize">12sp</dimen>
+    <dimen name="separatorWidth">4dp</dimen>
+    <dimen name="instructionSize">20sp</dimen>
+    <dimen name="buttonTextSize">20sp</dimen>
+    <dimen name="buttonPadding">4dp</dimen>
+    <dimen name="buttonSize">48dp</dimen>
+    <dimen name="setImageSize">20dp</dimen>
+</resources>
